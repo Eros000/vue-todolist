@@ -11,7 +11,29 @@
     </head>
     <body>
 
-        
+        <div id="app">
+
+            <div>
+
+                <form action="" @submit.prevent="addTodo()">
+
+                    <input required type="text" v-model="newTodo" placeholder="inserisci un nuovo todo">
+                    
+                    <button>
+                        Aggiungi
+                    </button>
+
+                </form>
+
+            </div>
+
+            <ul>
+                <li v-for="singleTodo in todos">
+                    {{singleTodo}}
+                </li>
+            </ul>
+
+        </div>
 
         <!--Java Script-->
         <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
